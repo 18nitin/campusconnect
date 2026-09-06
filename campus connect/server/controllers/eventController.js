@@ -4,7 +4,7 @@ const Event = require('../models/Event');
 // @route   GET /api/events
 const getEvents = async (req, res) => {
   try {
-    const events = await Event.find({});
+    const events =  await Event.find({});
     res.json(events);
   } catch (error) {
     res.status(500).json({ message: 'Server Error' });
